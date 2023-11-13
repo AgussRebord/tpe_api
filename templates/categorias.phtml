@@ -1,0 +1,28 @@
+<?php require_once './templates/header.phtml' ?>
+
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>id categoria</th>
+            <th>Nombre categoria</th>
+            <th>Detalle Categoria</th>    
+        </tr>
+    </thead>
+    
+    
+    <?php foreach($categorias as $categoria): ?>
+        
+        
+        
+        <tbody>
+            <tr>
+                <td><?= $categoria->id_categoria ?></td>                    
+                <td><?= $categoria->nombre_categoria ?></td> 
+                <td><a href="detailCategory/<?= $categoria->id_categoria?>" ><?= $categoria->nombre_categoria ?></a></td>
+            </tr>
+        </tbody>
+        <?php endforeach ?>
+        
+</table>
+

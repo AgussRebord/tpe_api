@@ -1,0 +1,27 @@
+<?php require_once './templates/header.phtml' ?>
+  <?php $categoria = $categoria->nombre_categoria ?>
+<div>
+    <h3>CATEGORIA: <?= $categoria ?></h3>
+
+    <?php if($categoria == 'servido'):?>
+             <img src="https://as1.ftcdn.net/v2/jpg/03/88/63/08/1000_F_388630882_V9W4Gj5KsLp5g7V1Z1uwr8JdP305yY6J.jpg" alt="" srcset="">;
+            <h4>Helado de 1kg para comer con un familiar o amigo!, Elegi tus sabores preferidos!!</h4>
+    <?php  elseif($categoria == 'tortas'):?>
+            <img src="https://cdn.pedix.app/SxMtPbVkRdOJLhnLESm4/categories/1653951205707.png?size=1500x1500" alt="" srcset="">;
+            <h4>Tortas heladas de distintos sabores!</h4>
+    <?php  elseif($categoria == 'bombones'):?>
+            <img src="https://app.pedidosbcn.com/img/productos/00004600.jpg?Friday" alt="" srcset="">;
+            <h4>Bombones de todo tipo!</h4>
+    <?php  elseif($categoria == 'otros'):?>
+            <img src="https://cdn.pedix.app/T2beuQpTeTGtC829uafT/categories/1685237662388.png?size=1500x1500" alt="" srcset="">
+            <h4>Cucuruchos, adheresos y mucho mas para tu helado!</h4>
+    
+    <?php else: ?>
+        <h4>Esta categoria no tiene imagen adjunta</h4>
+    
+    <?php endif ?>
+
+</div>
+
+
+<?php require_once './templates/footer.phtml' ?>

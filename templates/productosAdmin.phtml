@@ -1,0 +1,46 @@
+<?php require_once './templates/header.phtml' ?>
+
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>id producto</th>
+            <th>Nombre producto</th>
+            <th>Detalle producto</th>    
+        </tr>
+    </thead>
+    
+    
+    <?php foreach($productos as $producto): ?>
+        
+        
+        
+        <tbody>
+            <tr>
+                <td><?= $producto->id_productos ?></td>                    
+                <td><?= $producto->nombre_producto ?></td> 
+                <td><a href="detailProduct/<?= $producto->id_productos?>" ><?= $producto->nombre_producto ?></a></td>
+                <td><a href="deleteProduct/<?= $producto->id_productos ?>" type="button" class='btn btn-danger ml-auto'>Borrar</a></td>
+            </tr>
+        </tbody>
+        <?php endforeach ?>
+        
+    </table>
+    
+    
+    <form method="post" action="addProduct">
+        <label for="">Ingrese el producto que desea</label>
+        <input type="text" name="nombre_producto" id="nombre_producto">
+        <button type="submit">AGREGAR</button>
+        
+    </form>
+    <form method="post" action="editProduct">
+        <label for="">Ingrese el ID del Producto que desea editar</label>
+        <input type="text" id="producto_id" name="producto_id">
+        <label for="">Ingrese el producto que desea</label>
+        <input type="text" name="nombre_producto" id="nombre_producto">
+        <button type="submit">Editar</button>
+        
+    </form>
+    
+<?php require_once './templates/footer.phtml' ?>

@@ -1,0 +1,40 @@
+<?php require_once './templates/header.phtml' ?>
+  <?php $productos = $productos->nombre_producto ?>
+
+
+    <h3>productos: <?= $productos ?></h3>
+    <?php if($productos == 'Helado'):?>
+            <img src="https://www.cronista.com/files/image/292/292356/5ffe0527d388b.jpg" alt="" srcset="">;
+            <h4>Helado de 1kg para comer con un familiar o amigo!, Elegi tus sabores preferidos!!</h4>
+             
+    <?php  elseif($productos == 'Cucurucho'):?>
+            <img src="https://acdn.mitiendanube.com/stores/001/789/620/products/cono-dulce-30-35-401-de0de9970524af34e116431137111918-640-0.jpg" alt="" srcset="">;
+            <h4>Cucuruchos de la mejor calidad!!</h4>
+
+    <?php  elseif($productos == 'Torta Oreo'):?>
+            <img src="https://argentina.gridohelado.com/wp-content/uploads/2019/10/Torta-Oreo360X360.jpg" alt="" srcset="">;
+            <h4>Tortas oreo para disfrutar en familia!</h4>
+
+    <?php  elseif($productos == 'Torta Milka'):?>
+            <img src="https://i.pinimg.com/736x/96/cc/e0/96cce0dc7e902734dd8ff006c2abde0f.jpg" alt="" srcset="">;
+            <h4>Tortas milka para disfrutar en familia!</h4>
+
+    <?php  elseif($productos == 'Bombon Suizo'):?>
+            <img src="https://argentina.gridohelado.com/wp-content/uploads/2016/06/bombon-suizo.jpg" alt="" srcset="">;
+            <h4>Bombon suizo de dos sabores!</h4>
+
+    <?php  elseif($productos == 'Bombon Escoces'):?>
+            <img src="https://argentina.gridohelado.com/wp-content/uploads/2016/06/bombon-escoces.jpg" alt="" srcset="">;
+            <h4>Bombon escoces con mucho dulce de leche!</h4>
+
+    <?php  elseif($productos == 'Bombon Crocante'):?>
+            <img src="https://argentina.gridohelado.com/wp-content/uploads/2016/06/bombon-crocante.jpg" alt="" srcset="">
+            <h4>Bombon Crocante!!</h4>
+
+    <?php else: ?>
+        <h4>Esta categoria no tiene imagen adjunta</h4>
+
+    <?php endif ?>
+
+
+<?php require_once './templates/footer.phtml' ?>
